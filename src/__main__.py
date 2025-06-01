@@ -68,7 +68,6 @@ def trigger_action():
 
 			case A.cmd(command):
 				start_time = time.monotonic()
-				print(command)
 				subprocess.run((command,), shell=True, env=env)
 				end_time = time.monotonic()
 				delta_time = end_time - start_time
