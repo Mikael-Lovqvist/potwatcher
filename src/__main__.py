@@ -61,7 +61,7 @@ def trigger_action():
 	for action in config.trigger_action:
 		match action:
 			case action if action is A.clear:
-				print(end='\x1b[H\x1b[2J\x1b[3J')
+				print(end='\x1b[H\x1b[2J\x1b[3J', flush=True)
 
 			case action if action is A.show_stats:
 				print(times)
